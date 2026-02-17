@@ -35,6 +35,12 @@ def run_robot_arm():
 @pytest.fixture(scope="session")
 def test_result_file():
     """Fixture to create a test results file for logging test results"""
+
+    output_dir = os.path.join(PATH_TO_TEST_DIR, "output")
+
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+
     test_result_file_name = f"test_results_{time.time()}.txt"
     test_result_file_path = f"{PATH_TO_TEST_DIR}/output/{test_result_file_name}"
     # Create the test results file if it doesn't exist, otherwise clear its content
