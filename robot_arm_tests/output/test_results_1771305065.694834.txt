@@ -1,0 +1,8 @@
+Expected Visited Points	Actual Visited Points	Expected Error Point	Actual Error Point	Test Result
+[(-3, -149), (4, 150), (-4, -150), (0.045, 0.001)]	[(-3, -149), (4, 150), (-4, -150), (0.045, 0.001)]	[]	[]	Pass
+[(-3, -149), (4, 150), (-4, -150), (0.045, 0.001)]	[(-3, -149), (4, 150), (-4, -150), (0.045, 0.001)]	[(170, 150), (150, -155), (-6, 160), (-4.23, -150.56)]	[(170, 150), (150, -155), (-6, 160), (-4.23, -150.56)]	Pass
+[]	[]	[(170, 150), (150, -155), (-6, 160), (-4.23, -150.56)]	[(170, 150), (150, -155), (-6, 160), (-4.23, -150.56)]	Pass
+None	None	None	None	Fail
+None	None	None	None	Fail
+None	None	None	None	Fail
+None	None	None	None	Fail
