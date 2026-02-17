@@ -69,9 +69,13 @@ robot-arm-nearfield-instruments/
 ## 🚀 Features
 
 ✔ Modular architecture with separation of concerns 
+
 ✔ Deterministic coordinate tracking
+
 ✔ Input validation and boundary enforcement  
+
 ✔ End-to-end functional testing with Pytest
+
 
 ---
 
