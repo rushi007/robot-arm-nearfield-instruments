@@ -116,7 +116,7 @@ Points
 (150, -155)
 ```
 
-Run the application as follows:
+#### Run the application as follows:
 
 ```bash
 python -m app.main <path_to_input_file>
@@ -126,4 +126,16 @@ For Example:
 
 ```bash
 python -m app.main ./robot_arm_tests/resources/system_input_file.txt
+```
+
+### Running the Test Suite:
+
+```bash
+pytest
+```
+
+Or to run a specific test file:
+
+```bash
+pytest robot_arm_tests/tests/test_robot_arm.py
 ```
