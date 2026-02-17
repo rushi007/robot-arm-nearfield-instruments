@@ -98,13 +98,13 @@ Install the project dependencies:
 pip install -r requirements.txt
 ```
 
-### 🏁 Running the Application
+## 🏁 Running the Application
 The program expects exactly one input file containing:
 
 - A boundary rectangle definition # For example: `(-4, -150), (-4, 150), (160, -150), (160, 150)`
 - A list of navigation points # For example: `(-4, -150)`
 
-#### Sample Input File Format
+### Sample Input File Format
 
 ```text
 Rectangle
@@ -116,7 +116,7 @@ Points
 (150, -155)
 ```
 
-#### Run the application as follows:
+### Run the application as follows:
 
 ```bash
 python -m app.main <path_to_input_file>
@@ -128,6 +128,27 @@ For Example:
 python -m app.main ./robot_arm_tests/resources/system_input_file.txt
 ```
 
+## 🧪 Testing
+
+This will show the lines that were not covered by tests directly in the terminal output.
+
+### Test Structure
+The test suite is organized into:
+- `helpers/` – Contains utility functions for test setup and file handling
+- `resources/` – Contains input files for various test scenarios
+- `tests/` – Contains the actual test cases that validate the application behavior
+- `output/` – Stores output files generated during test execution for verification
+- `conftest.py` – Contains Pytest fixtures for setting up test environments and shared resources
+
+### Scenarios covered by tests include:
+- All points within the boundary rectangle
+- A mix of points inside and outside the boundary
+- Empty points section in the input file
+- Invalid boundary definitions (e.g., non-rectangular, malformed coordinates)
+- Points that are outside the defined boundary
+- Missing boundary rectangle in the input file
+- Invalid file types (e.g., non-text files)
+
 ### Running the Test Suite:
 
 ```bash
@@ -138,4 +159,30 @@ Or to run a specific test file:
 
 ```bash
 pytest robot_arm_tests/tests/test_robot_arm.py
+```
+
+### Test Coverage and Results
+To generate a test coverage report, run:
+
+```bash
+pytest --cov=robot_arm --cov=app
+```
+
+Or to generate an HTML coverage report:
+
+```bash
+pytest --cov=app --cov=robot_arm --cov-report=html
+```
+
+This will create an `htmlcov/` directory with a detailed coverage report.
+
+open `htmlcov/index.html` in a web browser to view the report.
+
+To see the lines for which coverage is missing,
+open the specific file in the coverage report and look for the red highlights in the report.
+
+Or run the following command to see the missing lines in the terminal:
+
+```bash
+pytest --cov=app --cov=robot_arm --cov-report=term-missing
 ```
