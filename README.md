@@ -130,7 +130,7 @@ python -m app.main ./robot_arm_tests/resources/system_input_file.txt
 
 ## 🧪 Testing
 
-This will show the lines that were not covered by tests directly in the terminal output.
+The project includes a comprehensive test suite using Pytest to validate the functionality of the Robot Arm application.
 
 ### Test Structure
 The test suite is organized into:
