@@ -104,6 +104,18 @@ The program expects exactly one input file containing:
 - A boundary rectangle definition # For example: `(-4, -150), (-4, 150), (160, -150), (160, 150)`
 - A list of navigation points # For example: `(-4, -150)`
 
+#### Sample Input File Format
+
+```text
+Rectangle
+(-4, -150), (-4, 150), (160, -150), (160, 150)
+Points
+(-3, -149)
+(4, 150)
+(170, 150)
+(150, -155)
+```
+
 Run the application as follows:
 
 ```bash
