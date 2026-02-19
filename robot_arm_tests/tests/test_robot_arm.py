@@ -24,7 +24,7 @@ class TestRobotArm:
     @allure.story("Input File Processing & Validation")
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.parametrize("input_file, error", test_data)
-    def test_robot_arm_valid_input_file(self, run_robot_arm, test_result_file,
+    def test_robot_arm_processing(self, run_robot_arm, test_result_file,
                                         input_file,
                                         error):
 
